@@ -32,6 +32,6 @@ Restore completed in 987.68 ms for D:\CoreAndFrameworkProj\CoreAndFrameworkProj\
 potential solution:
 
 use nuget to restore both projects (need 4.0 + **msbuild15** to restore core project) 
-nuget4.0 also works for .net framework(3.5 also works, but 3.5 cannot restore core project)
+nuget3.5 also works with .netframework projects, but 3.5 cannot restore core project.
 
 dotnet build works...but since we need **msbuild15**, might as well just use msbuild15
