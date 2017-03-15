@@ -29,8 +29,9 @@ Generating MSBuild file D:\CoreAndFrameworkProj\CoreAndFrameworkProj\obj\CoreAnd
 Writing lock file to disk. Path: D:\CoreAndFrameworkProj\CoreAndFrameworkProj\obj\project.assets.json
 Restore completed in 987.68 ms for D:\CoreAndFrameworkProj\CoreAndFrameworkProj\CoreAndFrameworkProj.csproj.`
 
-IE potential solution:
-use nuget to restore(need 4.0 + **msbuild15** to restore core project)
+potential solution:
+
+use nuget to restore both projects (need 4.0 + **msbuild15** to restore core project) 
 nuget4.0 also works for .net framework(3.5 also works, but 3.5 cannot restore core project)
 
 dotnet build works...but since we need **msbuild15**, might as well just use msbuild15
