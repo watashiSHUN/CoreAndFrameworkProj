@@ -10,7 +10,7 @@ namespace netframeworkLib
     {
         public static string returnStr()
         {
-            setStr(out string nuget)
+            setStr(out string nuget);
             return Newtonsoft.Json.JsonConvert.SerializeObject(nuget);
 
         }
