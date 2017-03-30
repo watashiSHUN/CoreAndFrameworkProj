@@ -70,7 +70,8 @@ echo Handling ASP.NET Core Web Application deployment.
 call :ExecuteCmd dotnet restore "CoreAndFrameworkProj.sln"
 IF !ERRORLEVEL! NEQ 0 goto error
 
-call :ExecuteCmd nuget restore "CoreAndFrameworkProj.sln"
+call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\CoreAndFrameworkProj.sln"
+IF !ERRORLEVEL! NEQ 0 goto error
 
 :: 2. Build and publish
 call :ExecuteCmd dotnet publish "CoreAndFrameworkProj\CoreAndFrameworkProj.csproj" --output "%DEPLOYMENT_TEMP%" --configuration Release
