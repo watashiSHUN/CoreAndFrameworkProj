@@ -10,7 +10,14 @@ namespace netframeworkLib
     {
         public static string returnStr()
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(".netframework");
+            setStr(out string nuget)
+            return Newtonsoft.Json.JsonConvert.SerializeObject(nuget);
+
+        }
+
+        private static void setStr(out string nuget)
+        {
+            nuget = ".net framework lib is successful";
         }
     }
 }

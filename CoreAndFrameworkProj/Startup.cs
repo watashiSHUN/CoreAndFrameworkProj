@@ -30,8 +30,15 @@ namespace CoreAndFrameworkProj
 
             app.Run(async (context) =>
             {
+                setStr(out string dotnet);
+                await context.Response.WriteAsync(dotnet);
                 await context.Response.WriteAsync(netframeworkLib.Class1.returnStr());
             });
+        }
+
+        private void setStr(out string dotnet)
+        {
+            dotnet = "dotnet core web app success";
         }
     }
 }
